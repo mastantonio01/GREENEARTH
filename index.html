@@ -67,10 +67,22 @@
                 <h2>Contact Us</h2>
 
                 <form class="form">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="text" placeholder="Cognome" required>
-                    <input type="Email" placeholder="Email" required>
-                    <textarea placeholder="Messaggio" required></textarea>
+                    <div class="field">
+                        <label for="name">Nome</label>
+                        <input id="name" name="name" type="text" placeholder="Nome" required>
+                    </div>
+                    <div class="field">
+                        <label for="surname">Cognome</label>
+                        <input id="surname" name="surname" type="text" placeholder="Cognome" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Messaggio</label>
+                        <textarea id="message" name="message" type="text" placeholder="Messaggio" required></textarea>
+                    </div>
                     <button class="btn" type="submit"> Invia </button>
                 </form>
             </div>
@@ -78,8 +90,13 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p> GreenEarth - hello@greenearth.com</p>
+        <div class="container footer-inner">
+            <p>GreenEarth - hello@greenearth.org</p>
+            <div class="social">
+                <a href="#" aria-label="Instagram" onclick="event.preventDefault()">Instagram</a>
+                <a href="#" aria-label="Facebook" onclick="event.preventDefault()">Facebook</a>
+                <a href="#" aria-label="TikTok" onclick="event.preventDefault()">TikTok</a>
+            </div>
         </div>
     </footer>
 </body>
