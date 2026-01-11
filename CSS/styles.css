@@ -1,0 +1,22 @@
+:root {
+    /*Background & neutrals*/
+    --bg: #071813;
+    --text: #ffffff;
+    --muted: rgba(255, 255, 255, 0.78);
+    --border: rgba (255, 255, 255, 0.14);
+
+    /*logo palette*/
+    --navy: #132F5D;
+    --blue: #14629A;
+    --teal: #29ACC8;
+    --sky: #61cfd6;
+    --aqua: #A0DCD8;
+
+    --leaf: #69A63b;
+    --leaf-dark: #579A4C;
+    --lime: #ADC632;
+
+    /*UI*/
+    --card: rgba(255, 255, 255, 0.08);
+    --radius: 16px;
+}
