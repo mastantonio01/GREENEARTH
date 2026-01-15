@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenEarth - Progetti ambientali con impatto misurabile</title>
     <meta name="description" content="Progetti a impatto ambientale come riforestazione e pulizia degli oceani">
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <header class="header">
         <div class="container header-inner">
             <a class="brand" href="#">
-                <img class="logo" src="IMG/icona GreenEarth.png" alt="Logo Green Earth">
-                <span>GreenEarth</span>
+                <img class="logo" src="IMG/logo2.png" alt="Logo Green Earth">
+                <h1>GREENEARTH</h1>
             </a>
 
             <nav class="nav">
@@ -22,51 +30,165 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <a class="btn" href="#contact">Unisciti a noi</a>
+            <!--<a class="btn" href="#contact">Unisciti a noi</a>-->
         </div>
     </header>
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Impatto ambientale reale</h1>
-                <p> Riforestazione e pulizia degli oceani con progetti concreti e misurabili</p>
-                <a class="btn" href="#contact">Sostieni un progetto</a>
-            </div>
-        </section>
+        <div class="bg-animato">
+            <section class="hero">
+                <div class="container">
+                    <h2>Impatto ambientale reale</h2>
+                    <p class="p"><strong>Riforestazione e pulizia degli oceani con progetti concreti e
+                            misurabili</strong></p>
+                    <a class="btn" href="#contact">Sostieni un progetto</a>
+                </div>
+            </section>
 
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Us</h2>
-                <p> GreenEarth crea e supporta progetti ambientali ad alto impatto: riforestazione, ripristino habitat e
-                    pulizia degli oceani</p>
-            </div>
-        </section>
+            <section id="about">
+                <div class="container">
+                    <h3>About Us</h3>
+                    <h4>Progetti ad alto impatto per aziende e comunità che vogliono fare la differenza.</h4>
 
-        <section id="projects" class="section">
-            <div class="container">
-                <h2> Our Projects</h2>
+                    <p>
+                        GreenEarth crea e supporta progetti ambientali ad alto impatto: riforestazione, ripristino degli
+                        habitat e
+                        pulizia degli oceani. Lavoriamo con partner sul territorio per trasformare idee e fondi in
+                        azioni
+                        concrete,
+                        misurabili e trasparenti.
+                    </p>
 
-                <div class="grid">
+                    <p>
+                        Ogni intervento viene pianificato, realizzato e seguito nel tempo: non ci interessa “fare
+                        rumore”,
+                        ci interessa
+                        lasciare risultati. Pubblichiamo aggiornamenti e report periodici per garantire responsabilità e
+                        dare
+                        valore reale
+                        a chi sceglie di sostenerci.
+                    </p>
+
+                    <ul class="about-list">
+                        <li><strong>Impatto misurabile:</strong> obiettivi chiari e indicatori di risultato.</li>
+                        <li><strong>Trasparenza:</strong> comunicazione costante su attività e progressi.</li>
+                        <li><strong>Collaborazioni locali:</strong> progetti reali, non iniziative “di facciata”.</li>
+                    </ul>
+
+                </div>
+            </section>
+        </div>
+
+        <!--<div class="background">
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2> Our Projects</h2>
+
                     <article class="card">
-                        <img src="" alt="">
-                        <h3>Ocean cleanup</h3>
-                        <p>Rimuoviamo plastica e reti fantasma dalle coste</p>
+                        <img src="IMG/riforestazione.jpg" alt="Riforestazione e biodiversità">
+                        <h3>Reforestation & Biodiversity</h3>
+                        <p>
+                            Piantiamo specie autoctone e ripristiniamo aree degradate, con manutenzione e monitoraggio
+                            nel
+                            tempo per garantire risultati reali.
+                        </p>
                     </article>
 
                     <article class="card">
-                        <img src="" alt="">
-                        <h3>Community Days</h3>
-                        <p>Eventi locali con volontari, scuole e aziende</p>
+                        <img src="IMG/oceani.jpg" alt="Pulizia costiera e rimozione plastica">
+                        <h3>Ocean & Coastal Cleanup</h3>
+                        <p>
+                            Interventi mirati su coste e fondali: rimozione plastica e reti fantasma, con tracciamento
+                            dei
+                            quantitativi raccolti e corretto smaltimento.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <img src="IMG/community.png" alt="Educazione ambientale e comunità">
+                        <h3>Community Impact Program</h3>
+                        <p>
+                            Eventi con scuole, volontari e aziende per sensibilizzare e agire sul territorio: educazione
+                            ambientale + azioni pratiche misurabili.
+                        </p>
                     </article>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>-->
 
-        <section id="contact" class="section">
+        <div class="background">
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2 class="projects-title">Our Projects</h2>
+
+                    <div class="projects-grid">
+                        <article class="card">
+                            <img src="IMG/riforestazione.jpg" alt="Riforestazione">
+                            <div class="card-content">
+                                <h3>Reforestation & Biodiversity</h3>
+                                <p>Piantiamo specie autoctone e ripristiniamo aree degradate, con manutenzione e
+                                    monitoraggio nel tempo.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="IMG/oceani.jpg" alt="Pulizia costiera">
+                            <div class="card-content">
+                                <h3>Ocean & Coastal Cleanup</h3>
+                                <p>Interventi mirati su coste e fondali: rimozione plastica e reti fantasma, con
+                                    tracciamento dei quantitativi.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="IMG/community.png" alt="Educazione ambientale">
+                            <h3>Community Impact Program</h3>
+                            <p>Eventi con scuole, volontari e aziende per sensibilizzare e agire sul territorio con
+                                azioni pratiche.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- <div class="background">
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2>Our Projects</h2>
+
+                    <div class="slider-container">
+                        <button class="prev-btn" onclick="scrollSlider(-1)">&#10094;</button>
+
+                        <div class="slider-wrapper" id="projectSlider">
+                            <article class="card">
+                                <img src="IMG/riforestazione.jpg" alt="Riforestazione">
+                                <h3>Reforestation & Biodiversity</h3>
+                                <p>Piantiamo specie autoctone e ripristiniamo aree degradate...</p>
+                            </article>
+
+                            <article class="card">
+                                <img src="IMG/oceani.jpg" alt="Pulizia costiera">
+                                <h3>Ocean & Coastal Cleanup</h3>
+                                <p>Interventi mirati su coste e fondali: rimozione plastica...</p>
+                            </article>
+
+                            <article class="card">
+                                <img src="IMG/community.png" alt="Educazione ambientale">
+                                <h3>Community Impact Program</h3>
+                                <p>Eventi con scuole, volontari e aziende per sensibilizzare...</p>
+                            </article>
+                        </div>
+
+                        <button class="next-btn" onclick="scrollSlider(1)">&#10095;</button>
+                    </div>
+                </div>
+            </section>
+        </div>-->
+
+        <!--<section id="contact" class="form">
             <div class="container">
                 <h2>Contact Us</h2>
 
-                <form class="form">
+                <form>
                     <div class="field">
                         <label for="name">Nome</label>
                         <input id="name" name="name" type="text" placeholder="Nome" required>
@@ -86,19 +208,79 @@
                     <button class="btn" type="submit"> Invia </button>
                 </form>
             </div>
+        </section>-->
+
+        <section id="contact" class="form-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p class="contact-subtitle">Hai domande? Scrivici e ti risponderemo il prima possibile.</p>
+
+                <form>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="name">Nome</label>
+                            <input id="name" name="name" type="text" placeholder="Nome" required>
+                        </div>
+                        <div class="field">
+                            <label for="surname">Cognome</label>
+                            <input id="surname" name="surname" type="text" placeholder="Cognome" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Messaggio</label>
+                        <textarea id="message" name="message" placeholder="Come possiamo aiutarti?" required></textarea>
+                    </div>
+
+                    <button class="btn" type="submit">Invia Messaggio</button>
+                </form>
+                <!--<div id="success-message" class="success-message" hidden>
+                    <div class="success-icon" aria-hidden="true">✓</div>
+                    <h3>Grazie per averci contattato!</h3>
+                    <p>Il tuo messaggio è stato inviato con successo. Ti risponderemo entro 24 ore.</p>
+                    <button class="btn success-btn" type="button" onclick="window.location.reload()">
+                        Invia un altro messaggio
+                    </button>
+                </div>-->
+
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <!--<footer class="footer">
         <div class="container footer-inner">
             <p>GreenEarth - hello@greenearth.org</p>
             <div class="social">
                 <a href="#" aria-label="Instagram" onclick="event.preventDefault()">Instagram</a>
+                <i class="bi bi-instagram"></i>
                 <a href="#" aria-label="Facebook" onclick="event.preventDefault()">Facebook</a>
                 <a href="#" aria-label="TikTok" onclick="event.preventDefault()">TikTok</a>
             </div>
         </div>
+    </footer>-->
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://www.instagram.com" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com" class="social-icon" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2026 GreenEarth. Tutti i diritti riservati.</p>
+        </div>
     </footer>
+
 </body>
 
 </html>
