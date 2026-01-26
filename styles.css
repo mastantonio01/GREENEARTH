@@ -1,0 +1,476 @@
+/* =========================
+   TOKENS / VARIABILI
+   ========================= */
+:root {
+    --bg: #071813;
+    --text: #ffffff;
+    --muted: rgba(255, 255, 255, 0.78);
+    --border: rgba(255, 255, 255, 0.14);
+
+    --teal: #29ACC8;
+    --sky: #61cfd6;
+    --leaf: #69A63b;
+    --lime: #ADC632;
+
+    --radius: 16px;
+    --shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.12);
+
+    --container: 1100px;
+    --header-h: 80px;
+}
+
+/* =========================
+   BASE
+   ========================= */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Zalando Sans Expanded", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    width: min(var(--container), calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* Titoli */
+.nome {
+    margin: 0;
+    font-family: "Gugi", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 0 0 16px;
+    text-align: center;
+    font-size: clamp(32px, 6vw, 60px);
+}
+
+h3 {
+    margin: 0 0 12px;
+    text-align: center;
+    font-size: clamp(22px, 3.2vw, 30px);
+}
+
+.p {
+    margin: 0 0 24px;
+    text-align: center;
+    font-size: clamp(18px, 2.5vw, 30px);
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* =========================
+   HEADER (il tuo HTML)
+   ========================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-h);
+    z-index: 9999;
+
+    background: rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.header-inner {
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    position: static;
+    /* IMPORTANT: niente absolute che rompe l'header */
+    transform: none;
+}
+
+.nav {
+    display: flex;
+    gap: 16px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.nav a:hover {
+    color: var(--sky);
+}
+
+@media (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+}
+
+/* Evita che le ancore vadano sotto l'header */
+#about,
+#projects,
+#contact {
+    scroll-margin-top: calc(var(--header-h) + 20px);
+}
+
+/* =========================
+   BUTTON (UNA SOLA VOLTA)
+   ========================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 20px;
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-weight: 800;
+
+    border: none;
+    cursor: pointer;
+
+    background: var(--teal);
+    color: #05211b;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* Variante che nel tuo CSS era scritta male */
+.btn--leaf {
+    background: linear-gradient(135deg, var(--leaf), var(--lime));
+    color: #05211b;
+}
+
+/* =========================
+   HERO + SFONDO (tuo: .bg-animato)
+   ========================= */
+.bg-animato {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-animato::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    /* coerente con il tuo HTML: IMG (maiuscolo) */
+    background-image: url("img/pianeta.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    animation: zoomElegante 15s infinite alternate ease-in-out;
+}
+
+.bg-animato>* {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes zoomElegante {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 768px) {
+    .bg-animato::before {
+        background-attachment: scroll;
+    }
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    padding-top: calc(var(--header-h) + 20px);
+    padding-bottom: 40px;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ABOUT (tuo id) */
+#about {
+    padding: 80px 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   PROJECTS (tuo: .background + #projects)
+   ========================= */
+.background {
+    padding: 80px 0;
+    background: var(--teal);
+    color: #05211b;
+}
+
+.projects-title {
+    text-align: center;
+    font-size: clamp(24px, 3vw, 40px);
+    margin: 0 0 50px;
+    color: inherit;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-soft);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px 20px 22px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #2d5a27;
+    text-align: left;
+}
+
+.card p {
+    margin: 0;
+    padding: 0;
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   FORM (tuo: .form-section)
+   ========================= */
+.form-section {
+    padding: 80px 0;
+    background: #f6fbfa;
+    color: #0c1f1a;
+}
+
+.form-section h2 {
+    color: #0c1f1a;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: #4a4a4a;
+    margin: -10px 0 26px;
+}
+
+.form-section .container {
+    max-width: 700px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 18px;
+}
+
+.field {
+    flex: 1;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.field label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #1e3d1a;
+}
+
+.field input,
+.field textarea {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.field textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #2d5a27;
+    box-shadow: 0 0 0 4px rgba(45, 90, 39, 0.12);
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-section .container {
+        padding: 22px;
+    }
+}
+
+/* =========================
+   FOOTER (tuo)
+   ========================= */
+.footer {
+    background: #f6fbfa;
+    color: #0c1f1a;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.social-links {
+    display: flex;
+    gap: 22px;
+}
+
+.social-icon {
+    color: #0c1f1a;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-4px);
+}
+
+.social-icon:hover .fa-instagram {
+    color: #E1306C;
+}
+
+.social-icon:hover .fa-facebook-f {
+    color: #4267B2;
+}
+
+.social-icon:hover .fa-tiktok {
+    color: #000;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+/*Header: modalità chiara quando sta su sezioni bianche */
+.header.is-light {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.header.is-light .brand,
+.header.is-light .nav a {
+    color: #111;
+}
+
+.header.is-light .nav a:hover {
+    color: #000;
+}
