@@ -75,7 +75,7 @@ h3 {
 }
 
 /* =========================
-   HEADER (il tuo HTML)
+           HEADER
    ========================= */
 .header {
     position: fixed;
@@ -146,7 +146,7 @@ h3 {
 }
 
 /* =========================
-   BUTTON (UNA SOLA VOLTA)
+          BUTTON
    ========================= */
 .btn {
     display: inline-flex;
@@ -173,14 +173,14 @@ h3 {
     box-shadow: var(--shadow);
 }
 
-/* Variante che nel tuo CSS era scritta male */
+
 .btn--leaf {
     background: linear-gradient(135deg, var(--leaf), var(--lime));
     color: #05211b;
 }
 
 /* =========================
-   HERO + SFONDO (tuo: .bg-animato)
+   HERO + SFONDO
    ========================= */
 .bg-animato {
     position: relative;
@@ -193,7 +193,7 @@ h3 {
     inset: 0;
     z-index: 0;
 
-    /* coerente con il tuo HTML: IMG (maiuscolo) */
+    
     background-image: url("img/pianeta.png");
     background-size: cover;
     background-position: center;
@@ -239,14 +239,14 @@ h3 {
     text-align: center;
 }
 
-/* ABOUT (tuo id) */
+/* ABOUT */
 #about {
     padding: 80px 0;
     background: rgba(0, 0, 0, 0.35);
 }
 
 /* =========================
-   PROJECTS (tuo: .background + #projects)
+   PROJECTS
    ========================= */
 .background {
     padding: 80px 0;
@@ -323,7 +323,7 @@ h3 {
 }
 
 /* =========================
-   FORM (tuo: .form-section)
+   FORM
    ========================= */
 .form-section {
     padding: 80px 0;
@@ -411,7 +411,7 @@ form {
 }
 
 /* =========================
-   FOOTER (tuo)
+   FOOTER
    ========================= */
 .footer {
     background: #f6fbfa;
